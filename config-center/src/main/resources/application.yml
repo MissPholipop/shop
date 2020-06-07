@@ -10,8 +10,8 @@ spring:
         git:
           uri: https://github.com/MissPholipop/spring-cloud-config.git
           search-paths: spring-cloud-config
-          username: 1067927306@qq.com
-          password: '@#huangyan258'
+          username: yourusername
+          password: 'yourpassword'
       label: master
     consul:
       host: localhost
