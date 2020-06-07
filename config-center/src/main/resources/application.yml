@@ -1,0 +1,21 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-cenrer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/MissPholipop/spring-cloud-config.git
+          search-paths: spring-cloud-config
+          username: 1067927306@qq.com
+          password: '@#huangyan258'
+      label: master
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        prefer-ip-address: true

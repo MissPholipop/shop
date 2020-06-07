@@ -1,0 +1,22 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-cenrer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/hyanilve/spring-cloud-config.git
+          search-paths: spring-cloud-config
+          username: Songminhy
+          password: Hyan123456
+      label: master
+
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
