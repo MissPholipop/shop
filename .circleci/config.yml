@@ -13,14 +13,12 @@ jobs:
       - restore_cache:
           key: circleci-shop-{{ checksum "pom.xml" }}
 
-      - run: mvn dependency:go-offline
+      - run: mvn test
 
       - save_cache:
           paths:
             - ~/.m2
           key: circleci-shop-{{ checksum "pom.xml" }}
-
-      - run: mvn test
 
 workflows:
   version: 2
